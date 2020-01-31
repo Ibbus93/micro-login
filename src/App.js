@@ -1,19 +1,22 @@
 import React from 'react';
-import { SignIn } from './features';
+import {SignIn} from './features';
 
 import styled from 'styled-components';
 
 const AppWrapper = styled.div`
-    min-height: 100vh;
+    height: 100vh;
     display: flex;
+    align-items: center;
     flex-direction: column;
+    justify-content: center;
     font-family: Roboto;
-    background: lightblue;
+    background: #c9d9de;
 `;
+
 
 const App = () => (
     <AppWrapper>
-        <SignIn />
+        <SignIn/>
     </AppWrapper>
 );
 
