@@ -1,12 +1,20 @@
 import React from 'react';
-import { createBrowserHistory } from 'history';
-
 import { SignIn } from './features';
 
-const defaultHistory = createBrowserHistory();
+import styled from 'styled-components';
 
-const App = ({ history = defaultHistory }) => (
-    <SignIn />
+const AppWrapper = styled.div`
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: Roboto;
+    background: lightblue;
+`;
+
+const App = () => (
+    <AppWrapper>
+        <SignIn />
+    </AppWrapper>
 );
 
 export default App;
