@@ -1,5 +1,5 @@
 import SignIn from './sign-in';
 
-export default {
+export {
     SignIn
 };

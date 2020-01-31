@@ -1,7 +1,11 @@
 import React from 'react';
-import SignIn from './features';
+import { createBrowserHistory } from 'history';
 
-const App = () => (
+import { SignIn } from './features';
+
+const defaultHistory = createBrowserHistory();
+
+const App = ({ history = defaultHistory }) => (
     <SignIn />
 );
 
