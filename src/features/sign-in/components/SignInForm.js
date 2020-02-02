@@ -9,6 +9,8 @@ const SignInForm = ({
         username,
         password
     },
+    touched,
+    errors,
     handleSubmit,
     handleChange,
     handleBlur
@@ -21,6 +23,8 @@ const SignInForm = ({
                 value={username}
                 onChange={handleChange}
                 onBlur={handleBlur}
+                error={touched.username && Boolean(errors.username)}
+                helperText={touched.username ? 'Username required' : ''}
                 InputProps={{
                     startAdornment: (
                         <InputAdornment position="start">
@@ -37,6 +41,8 @@ const SignInForm = ({
                 value={password}
                 onChange={handleChange}
                 onBlur={handleBlur}
+                error={touched.password && Boolean(errors.password)}
+                helperText={touched.password ? 'Password required' : ''}
                 InputProps={{
                     startAdornment: (
                         <InputAdornment position="start">

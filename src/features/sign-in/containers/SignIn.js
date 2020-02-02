@@ -1,34 +1,28 @@
 import React from 'react';
 import { Formik } from 'formik';
 
-import validationSchema from '../validators';
+import { validationSchema, initialValues } from '../utils';
 import { SignInForm, Card, CardHeader } from "../components";
+import { Typography } from '@material-ui/core';
 
-const SignIn = () => {
-    const initialValues = {
-        username: '',
-        password: ''
-    };
+const SignIn = () => (
+    <Card>
+        <CardHeader>
+            <Typography variant="h4">Micro Login</Typography>
+            <Typography variant="body2">Please provide your information before continue</Typography>
+        </CardHeader>
 
-    return (
-        <Card>
-            <CardHeader>
-                <h2>Sign In</h2>
-                <span>Please provide your information before continue</span>
-            </CardHeader>
-
-            <Formik
-                initialValues={initialValues}
-                validationSchema={validationSchema}
-                onSubmit={() => alert("Compliments!")}>
-                {props => (
-                    <SignInForm
-                        {...props }
-                    />
-                )}
-            </Formik>
-        </Card>
-    )
-};
+        <Formik
+            initialValues={initialValues}
+            validationSchema={validationSchema}
+            onSubmit={() => alert("Compliments!")}>
+            {props => (
+                <SignInForm
+                    {...props}
+                />
+            )}
+        </Formik>
+    </Card>
+);
 
 export default SignIn;
