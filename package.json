@@ -1,7 +1,10 @@
 {
   "name": "micro-login",
-  "homepage": "https://ibbus93.github.io/micro-login",
   "version": "1.0.0",
+  "homepage": "https://ibbus93.github.io/micro-login",
+  "description": "Login React app based on web components micro frontends",
+  "repository": "git@github.com:Ibbus93/micro-login",
+  "author: "Federico Ibba",
   "license": "MIT",
   "scripts": {
     "format": "prettier --write",
