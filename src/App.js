@@ -1,7 +1,11 @@
 import React from 'react';
-import {SignIn} from './features';
-
 import styled from 'styled-components';
+
+import { Provider } from 'react-redux';
+import store from './store';
+
+import { SignIn } from './features';
+
 
 const AppWrapper = styled.div`
     height: 100vh;
@@ -15,9 +19,11 @@ const AppWrapper = styled.div`
 
 
 const App = () => (
-    <AppWrapper>
-        <SignIn/>
-    </AppWrapper>
+    <Provider store={store}>
+        <AppWrapper>
+            <SignIn />
+        </AppWrapper>
+    </Provider>
 );
 
 export default App;
