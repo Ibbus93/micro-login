@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { TextField } from "@material-ui/core";
+import { LinearProgress, TextField, Typography } from "@material-ui/core";
 
 const Card = styled.div`
     display: flex;
@@ -23,9 +23,20 @@ const InputField = styled(TextField)`
     margin-top: 1rem !important
 `;
 
+const Loading = styled(LinearProgress)`
+    margin-top: 1rem !important
+`;
+
+const ErrorText = styled(Typography)`
+    margin-top: 1rem !important;
+    color: red !important;
+`;
+
 export {
     Card,
-    CardHeader,
+    Loading,
     CardBody,
+    ErrorText,
+    CardHeader,
     InputField
 }

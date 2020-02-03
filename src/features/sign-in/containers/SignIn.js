@@ -2,10 +2,10 @@ import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 
 import { Formik } from 'formik';
-import { CircularProgress, LinearProgress, Typography } from '@material-ui/core';
+import { Typography } from '@material-ui/core';
 
 import { validationSchema, initialValues } from '../utils';
-import { SignInForm, Card, CardHeader } from "../components";
+import { SignInForm, Card, CardHeader, LinearProgress, ErrorText } from "../components";
 
 import { requestUser } from '../../../store/user/actions';
 import { Selector } from '../../../store/user/reducer';
@@ -13,6 +13,7 @@ import { Selector } from '../../../store/user/reducer';
 const SignIn = ({
     user: {
         isLoading,
+        error,
         data
     },
     onSubmit
@@ -20,6 +21,8 @@ const SignIn = ({
     useEffect(() => {
         if (data) {
             const { logged, id } = data;
+
+            // Dispatch here to the container the login done
             console.log(logged, id);
         }
     }, [data]);
@@ -30,17 +33,24 @@ const SignIn = ({
 
     return (
         <Card>
-            { isLoading && ( <LinearProgress fullWidth /> ) }
             <CardHeader>
                 <Typography variant="h4">Micro Login</Typography>
                 <Typography variant="body2">Please provide your information before continue</Typography>
             </CardHeader>
 
+            { isLoading && <LinearProgress /> }
+
+            { !error && (
+                <ErrorText variant="body2">
+                    An error occurred during the operation of signing in. Please, try again later.
+                </ErrorText>
+            )}
+
             <Formik
                 initialValues={initialValues}
                 validationSchema={validationSchema}
                 onSubmit={handleSubmit}>
-                {props => (
+                { props => (
                     <SignInForm
                         {...props}
                     />
