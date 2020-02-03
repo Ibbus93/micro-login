@@ -10,5 +10,5 @@ window.renderSignIn = (containerId, history) => {
 };
 
 window.unmountSignIn = (containerId) => {
-    ReactDOM.unmountComponentAtNode(containerId)
+    ReactDOM.unmountComponentAtNode(document.getElementById(containerId))
 };
