@@ -9,9 +9,11 @@ const SignInForm = ({
         username,
         password
     },
+    touched,
+    errors,
     handleSubmit,
     handleChange,
-    handleBlur
+    handleBlur,
 }) => (
     <form onSubmit={handleSubmit}>
         <CardBody>
@@ -21,6 +23,8 @@ const SignInForm = ({
                 value={username}
                 onChange={handleChange}
                 onBlur={handleBlur}
+                error={touched.username && Boolean(errors.username)}
+                helperText={touched.username && Boolean(errors.username) ? 'Username is required' : ''}
                 InputProps={{
                     startAdornment: (
                         <InputAdornment position="start">
@@ -37,6 +41,8 @@ const SignInForm = ({
                 value={password}
                 onChange={handleChange}
                 onBlur={handleBlur}
+                error={touched.password && Boolean(errors.password)}
+                helperText={touched.password && Boolean(errors.password) ? 'Password is required' : ''}
                 InputProps={{
                     startAdornment: (
                         <InputAdornment position="start">

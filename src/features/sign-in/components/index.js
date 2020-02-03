@@ -1,10 +1,12 @@
 import SignInForm from "./SignInForm";
-import { InputField, CardBody, CardHeader, Card} from './Styled';
+import { InputField, CardBody, CardHeader, Card, Loading as LinearProgress, ErrorText } from './Styled';
 
 export {
-    InputField,
-    CardBody,
-    CardHeader,
     Card,
-    SignInForm
+    CardBody,
+    ErrorText,
+    CardHeader,
+    InputField,
+    SignInForm,
+    LinearProgress,
 };
