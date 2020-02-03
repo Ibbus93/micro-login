@@ -40,7 +40,7 @@ const SignIn = ({
 
             { isLoading && <LinearProgress /> }
 
-            { !error && (
+            { error && (
                 <ErrorText variant="body2">
                     An error occurred during the operation of signing in. Please, try again later.
                 </ErrorText>
