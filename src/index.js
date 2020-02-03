@@ -1,10 +1,14 @@
-import * as React from 'react';
-import { render } from 'react-dom';
+import React from 'react';
+import ReactDOM from 'react-dom';
 
 import App from './App';
 
 import './index.css';
 
 window.renderSignIn = (containerId, history) => {
-    render(<App history={history} />, document.getElementById(containerId))
+    ReactDOM.render(<App history={history} />, document.getElementById(containerId))
+};
+
+window.unmountSignIn = (containerId) => {
+    ReactDOM.unmountComponentAtNode(containerId)
 };

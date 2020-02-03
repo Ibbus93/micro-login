@@ -1,12 +1,16 @@
 {
   "name": "micro-login",
+  "author": "Federico Ibba",
+  "homepage": "http://ibbus93.github.io/micro-login",
   "version": "1.0.0",
   "license": "MIT",
   "scripts": {
     "format": "prettier --write",
     "start": "react-app-rewired start",
     "build": "react-app-rewired build",
-    "test": "react-app-rewired test"
+    "test": "react-app-rewired test",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "dependencies": {
     "@material-ui/core": "^4.9.0",
@@ -21,6 +25,7 @@
     "yup": "^0.28.1"
   },
   "devDependencies": {
+    "gh-pages": "^2.2.0",
     "react-app-rewired": "^2.1.1"
   },
   "config-overrides-path": "config-overrides.js",
