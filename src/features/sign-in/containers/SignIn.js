@@ -7,8 +7,8 @@ import { Typography } from '@material-ui/core';
 import { validationSchema, initialValues } from '../utils';
 import { SignInForm, Card, CardHeader, LinearProgress, ErrorText } from "../components";
 
-import { requestUser } from '../../../store/user/actions';
-import { Selector } from '../../../store/user/reducer';
+import { signInUser } from '../../../store/sign-in/actions';
+import { Selector } from '../../../store/sign-in/reducer';
 
 const SignIn = ({
     user: {
@@ -65,7 +65,7 @@ const mapStateToProps = state => ({
 });
 
 const dispatchToProps = {
-    onSubmit: requestUser
+    onSubmit: signInUser
 };
 
 export default connect(mapStateToProps, dispatchToProps)(SignIn);
