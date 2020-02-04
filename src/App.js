@@ -6,9 +6,8 @@ import store from './store';
 
 import { SignIn } from './features';
 
-
 const AppWrapper = styled.div`
-    height: 100vh;
+    height: 100%;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -16,7 +15,6 @@ const AppWrapper = styled.div`
     font-family: Roboto;
     background: #c9d9de;
 `;
-
 
 const App = () => (
     <Provider store={store}>

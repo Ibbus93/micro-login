@@ -33,7 +33,7 @@ const SignInForm = ({
                     ),
                 }}
                 fullWidth
-                required/>
+            />
             <InputField
                 id="password"
                 label="Password"
@@ -51,7 +51,7 @@ const SignInForm = ({
                     ),
                 }}
                 fullWidth
-                required/>
+            />
         </CardBody>
         <Button variant="contained" color="primary" type="submit" fullWidth>Sign In</Button>
     </form>
