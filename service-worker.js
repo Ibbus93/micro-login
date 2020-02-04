@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/micro-login/precache-manifest.5c0fd1fedced4b3f3af80da54b1e3750.js"
+  "/micro-login/precache-manifest.d7553d7577a237f97682323e57e18947.js"
 );
 
 workbox.clientsClaim();
