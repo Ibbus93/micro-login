@@ -1,9 +1,9 @@
 {
   "main.css": "/micro-login/static/css/main.81b50543.css",
-  "main.js": "/micro-login/static/js/main.2eb77dd8.js",
-  "main.js.map": "/micro-login/static/js/main.2eb77dd8.js.map",
+  "main.js": "/micro-login/static/js/main.3da2cecf.js",
+  "main.js.map": "/micro-login/static/js/main.3da2cecf.js.map",
   "index.html": "/micro-login/index.html",
-  "precache-manifest.042135c43d39431f7407d9f1874d68b3.js": "/micro-login/precache-manifest.042135c43d39431f7407d9f1874d68b3.js",
+  "precache-manifest.2f80b0d21bf70ea992f97f116f6e533b.js": "/micro-login/precache-manifest.2f80b0d21bf70ea992f97f116f6e533b.js",
   "service-worker.js": "/micro-login/service-worker.js",
   "static/css/main.81b50543.css.map": "/micro-login/static/css/main.81b50543.css.map"
 }
