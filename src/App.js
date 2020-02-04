@@ -13,7 +13,6 @@ const AppWrapper = styled.div`
     flex-direction: column;
     justify-content: center;
     font-family: Roboto;
-    background: #c9d9de;
 `;
 
 const App = ({ handler }) => (
