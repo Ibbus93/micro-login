@@ -16,10 +16,10 @@ const AppWrapper = styled.div`
     background: #c9d9de;
 `;
 
-const App = () => (
+const App = ({ handler }) => (
     <Provider store={store}>
         <AppWrapper>
-            <SignIn />
+            <SignIn handler={handler} />
         </AppWrapper>
     </Provider>
 );

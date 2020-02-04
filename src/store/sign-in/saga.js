@@ -5,11 +5,11 @@ import { signIn } from '../../api';
 
 function* signInUser({ username, password }) {
     try {
-        const user = (yield call(signIn,{ username, password }));
+        const user = yield call(signIn,{ username, password });
 
         yield put(receivedUser({ user }));
     } catch (e) {
-        console.log(e);
+        console.error(e);
         yield put(signInError(e));
     }
 }

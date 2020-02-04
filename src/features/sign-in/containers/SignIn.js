@@ -16,14 +16,14 @@ const SignIn = ({
         error,
         data
     },
-    onSubmit
+    onSubmit,
+    handler
 }) => {
     useEffect(() => {
         if (data) {
             const { logged, id } = data;
 
-            // Dispatch here to the container the login done
-            console.log(logged, id);
+            handler({ logged, id });
         }
     }, [data]);
 
@@ -58,6 +58,10 @@ const SignIn = ({
             </Formik>
         </Card>
     );
+};
+
+SignIn.defaultProps = {
+    handler: () => {}
 };
 
 const mapStateToProps = state => ({
