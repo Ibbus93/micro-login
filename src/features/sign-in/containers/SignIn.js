@@ -21,9 +21,9 @@ const SignIn = ({
 }) => {
     useEffect(() => {
         if (data) {
-            const { logged, id } = data;
+            const { id, token } = data;
 
-            handler({ logged, id });
+            handler({ id, token });
         }
     }, [data]);
 
