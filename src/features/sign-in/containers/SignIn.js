@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
 import { Formik } from 'formik';
@@ -60,7 +61,25 @@ const SignIn = ({
     );
 };
 
+SignIn.propTypes = {
+    user: PropTypes.shape({
+        isLoading: PropTypes.bool,
+        error: PropTypes.any,
+        data: PropTypes.shape({
+            id: PropTypes.string,
+            token: PropTypes.string
+        })
+    }),
+    onSubmit: PropTypes.func,
+    handler: PropTypes.func
+};
 SignIn.defaultProps = {
+    user: {
+        isLoading: false,
+        error: null,
+        data: null
+    },
+    onSubmit: () => {},
     handler: () => {}
 };
 

@@ -1,8 +1,10 @@
 import React from "react";
-import { Button, InputAdornment } from "@material-ui/core";
+import PropTypes from 'prop-types';
+
+import { InputAdornment } from "@material-ui/core";
 import { AccountCircle, Lock } from "@material-ui/icons";
 
-import { CardBody, InputField } from "./Styled";
+import { LoginButton, CardBody, InputField } from "./Styled";
 
 const SignInForm = ({
     values: {
@@ -53,8 +55,43 @@ const SignInForm = ({
                 fullWidth
             />
         </CardBody>
-        <Button variant="contained" color="primary" type="submit" fullWidth>Sign In</Button>
+        <LoginButton variant="contained" color="primary" type="submit" fullWidth>Sign In</LoginButton>
     </form>
 );
+
+SignInForm.propTypes = {
+    values: PropTypes.shape({
+        username: PropTypes.string,
+        password: PropTypes.string
+    }),
+    touched: PropTypes.shape({
+        username: PropTypes.bool,
+        password: PropTypes.bool
+    }),
+    errors: PropTypes.shape({
+        username: PropTypes.string,
+        password: PropTypes.string
+    }),
+    handleSubmit: PropTypes.func,
+    handleChange: PropTypes.func,
+    handleBlur: PropTypes.func
+};
+SignInForm.defaultProps = {
+    values: {
+        username: '',
+        password: ''
+    },
+    touched: {
+        username: false,
+        password: false
+    },
+    errors: {
+        username: '',
+        password: ''
+    },
+    handleSubmit: () => {},
+    handleChange: () => {},
+    handleBlur: () => {}
+};
 
 export default SignInForm;
