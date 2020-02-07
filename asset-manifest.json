@@ -1,9 +1,16 @@
 {
-  "main.css": "/micro-login/static/css/main.f5d854a7.css",
-  "main.js": "/micro-login/static/js/main.a98d4acc.js",
-  "main.js.map": "/micro-login/static/js/main.a98d4acc.js.map",
-  "index.html": "/micro-login/index.html",
-  "precache-manifest.a36f0d5d27a3c6488aecf0bfda732049.js": "/micro-login/precache-manifest.a36f0d5d27a3c6488aecf0bfda732049.js",
-  "service-worker.js": "/micro-login/service-worker.js",
-  "static/css/main.f5d854a7.css.map": "/micro-login/static/css/main.f5d854a7.css.map"
+  "files": {
+    "main.css": "/micro-login/static/css/main.1c7cd5fc.css",
+    "main.js": "/micro-login/static/js/main.a86d5ba9.js",
+    "main.js.map": "/micro-login/static/js/main.a86d5ba9.js.map",
+    "index.html": "/micro-login/index.html",
+    "precache-manifest.58a25ea9c5c461c41d083b5a6afb01a0.js": "/micro-login/precache-manifest.58a25ea9c5c461c41d083b5a6afb01a0.js",
+    "service-worker.js": "/micro-login/service-worker.js",
+    "static/css/main.1c7cd5fc.css.map": "/micro-login/static/css/main.1c7cd5fc.css.map",
+    "static/js/main.a86d5ba9.js.LICENSE.txt": "/micro-login/static/js/main.a86d5ba9.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/css/main.1c7cd5fc.css",
+    "static/js/main.a86d5ba9.js"
+  ]
 }
