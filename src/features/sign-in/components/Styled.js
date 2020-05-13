@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Button, LinearProgress, TextField, Typography } from "@material-ui/core";
+import { LinearProgress, TextField, Typography } from "@material-ui/core";
 
 const Card = styled.div`
     display: flex;
@@ -32,10 +32,6 @@ const ErrorText = styled(Typography)`
     color: red !important;
 `;
 
-const LoginButton = styled(Button)`
-    background: green !important;
-`;
-
 export {
     Card,
     Loading,
@@ -43,5 +39,4 @@ export {
     ErrorText,
     CardHeader,
     InputField,
-    LoginButton
 }
