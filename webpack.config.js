@@ -11,6 +11,7 @@ module.exports = {
 
   devServer: {
     contentBase: './dist',
+    host: 'localhost',
     port: '3000',
   },
 
@@ -19,8 +20,8 @@ module.exports = {
   },
 
   output: {
-    publicPath: 'http://app-micro-login.s3-website-eu-west-1.amazonaws.com/',
-    // 'http://localhost:3000/',
+    publicPath: 'http://localhost:3000/',
+    // 'http://app-micro-login.s3-website-eu-west-1.amazonaws.com/',
   },
 
   resolve: {
@@ -46,8 +47,8 @@ module.exports = {
 
   plugins: [
     new ModuleFederationPlugin({
-      name: 'sign_up',
-      library: { type: 'var', name: 'sign_up' },
+      name: 'signIn',
+      library: { type: 'var', name: 'signIn' },
       filename: 'remoteEntry.js',
       remotes: {
         component_library: 'component_library',
