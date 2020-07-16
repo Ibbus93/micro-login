@@ -36,7 +36,7 @@ App.propTypes = {
 };
 
 App.defaultProps = {
-  // handler: () => {},
+  handler: () => { },
   history: createBrowserHistory(),
 };
 

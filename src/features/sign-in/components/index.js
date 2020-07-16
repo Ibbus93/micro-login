@@ -1,5 +1,5 @@
 import SignInForm from "./SignInForm";
-import { InputField, CardBody, CardHeader, Card, Loading as LinearProgress, ErrorText } from './Styled';
+import { InputField, CardBody, CardHeader, Card, Loading as LinearProgress, ErrorText, LoginButton } from './Styled';
 
 export {
     Card,
@@ -8,5 +8,6 @@ export {
     CardHeader,
     InputField,
     SignInForm,
+    LoginButton,
     LinearProgress,
 };

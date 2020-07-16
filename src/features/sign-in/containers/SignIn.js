@@ -15,8 +15,10 @@ import {
 import { signInUser } from '../../../store/sign-in/actions';
 import { Selector } from '../../../store/sign-in/reducer';
 
-const Card = React.lazy(() => import('component_library/Card'));
-const CardHeader = React.lazy(() => import('component_library/CardHeader'));
+// const Card = React.lazy(() => import('component_library/Card'));
+// const CardHeader = React.lazy(() => import('component_library/CardHeader'));
+
+import { Card, CardHeader } from '../components';
 
 const SignIn = ({ user: { isLoading, error, data }, onSubmit, handler }) => {
   useEffect(() => {
@@ -80,8 +82,8 @@ SignIn.defaultProps = {
     error: null,
     data: null,
   },
-  onSubmit: () => {},
-  handler: () => {},
+  onSubmit: () => { },
+  handler: () => { },
 };
 
 const mapStateToProps = (state) => ({
