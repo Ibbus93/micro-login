@@ -6,7 +6,7 @@ const Card = styled.div`
     flex-direction: column;
     max-width: 640px;
     background: white;
-    border-radius: 20px   
+    // border-radius: 20px   
     text-align: center;
     padding: 2rem;
 `;
